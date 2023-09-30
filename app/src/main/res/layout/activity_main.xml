@@ -9,6 +9,7 @@
 
 
     <TextView
+        android:id="@+id/outputString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -18,26 +19,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.884" />
 
+
     <Button
         android:id="@+id/calculate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="handleCalculateBtn"
         android:text="Calculate mortgage Rate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interest_rate"
-        app:layout_constraintVertical_bias="0.097" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.688" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/topLabel"
         android:layout_width="411dp"
         android:layout_height="49dp"
         android:text="Enter Details Below to Get Started"
         android:textSize="16sp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/mortgage_amt_tenure_lbl"
+        app:layout_constraintBottom_toTopOf="@+id/principalAmtLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,55 +48,86 @@
         app:layout_constraintVertical_bias="0.025" />
 
 
-                <!--    Mortgage Amount-->
-    <EditText
-        android:id="@+id/mortgage_amt_tenure"
-        android:layout_width="220dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:hint="Enter Amount"
-        android:inputType="numberDecimal"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mortgage_amt_tenure_lbl" />
+    <!--    Principal Amount-->
 
     <TextView
-        android:id="@+id/mortgage_amt_tenure_lbl"
+        android:id="@+id/principalAmtLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="mortgage Amount Tenure:"
+        android:layout_marginTop="92dp"
+        android:text="Princpal Amount:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-            <!--    Interest Rate       -->
-
     <EditText
-        android:id="@+id/interest_rate"
+        android:id="@+id/principalAmt"
         android:layout_width="220dp"
         android:layout_height="48dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="4dp"
         android:hint="Enter Amount"
-        android:inputType="numberDecimal"
+        android:inputType="number|numberDecimal"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mortgage_amt_tenure" />
+        app:layout_constraintTop_toBottomOf="@+id/principalAmtLabel" />
+
+
+    <!--    Interest Rate       -->
+
+    <EditText
+        android:id="@+id/interestText"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314" />
 
     <TextView
-        android:id="@+id/interest_rate_lbl"
+        android:id="@+id/interestLabel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="244dp"
+        android:layout_height="19dp"
         android:text="Interest Rate:"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262" />
+
+    <!--    Interest Rate       -->
+
+    <EditText
+        android:id="@+id/monthPeriods"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:hint="Enter Amount"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <TextView
+        android:id="@+id/monthPeriodsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="Monthly Intervals:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
