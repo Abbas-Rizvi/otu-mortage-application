@@ -12,7 +12,7 @@
         android:id="@+id/outputString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/resultOutput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="handleCalculateBtn"
-        android:text="Calculate mortgage Rate"
+        android:text="@string/calculateButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -33,29 +33,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.688" />
 
+
+    <!--    Principal Amount-->
+
     <TextView
         android:id="@+id/topLabel"
         android:layout_width="411dp"
         android:layout_height="49dp"
-        android:text="Enter Details Below to Get Started"
-        android:textSize="16sp"
+        android:text="@string/pageTitle"
         android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/principalAmtLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
-
-
-    <!--    Principal Amount-->
+        app:layout_constraintVertical_bias="0.372" />
 
     <TextView
         android:id="@+id/principalAmtLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
-        android:text="Princpal Amount:"
+        android:text="@string/principalAmountLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -65,7 +65,7 @@
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
-        android:hint="Enter Amount"
+        android:hint="@string/principalAmtEditText"
         android:inputType="number|numberDecimal"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +80,7 @@
         android:id="@+id/interestText"
         android:layout_width="220dp"
         android:layout_height="48dp"
-        android:hint="Enter Amount"
+        android:hint="@string/InterestRateEditTextHint"
         android:inputType="numberDecimal"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,7 +94,7 @@
         android:id="@+id/interestLabel"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="Interest Rate:"
+        android:text="@string/InterestRateLabel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -108,7 +108,7 @@
         android:id="@+id/monthPeriods"
         android:layout_width="220dp"
         android:layout_height="48dp"
-        android:hint="Enter Amount"
+        android:hint="@string/monthlyIntervalsAmountHint"
         android:inputType="number"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -122,12 +122,25 @@
         android:id="@+id/monthPeriodsLabel"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="Monthly Intervals:"
+        android:text="@string/MonthlyIntervalsLabel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.396" />
+
+    <Button
+        android:id="@+id/tdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tdButton"
+        android:text="@string/TdMortageApplicationBtnText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

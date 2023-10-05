@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MortageApplication</string>
+    <string name="resultOutput" />
+    <string name="calculateButtonText">Calculate mortgage Rate</string>
+    <string name="pageTitle">Mortage Calculation Application</string>
+    <string name="principalAmountLabel">Princpal Amount:</string>
+    <string name="principalAmtEditText">Enter Amount</string>
+    <string name="InterestRateEditTextHint">Enter Amount</string>
+    <string name="InterestRateLabel">Interest Rate (%):</string>
+    <string name="monthlyIntervalsAmountHint">Enter Amount</string>
+    <string name="MonthlyIntervalsLabel">Monthly Intervals:</string>
+    <string name="TdMortageApplicationBtnText">TD Mortage Application</string>
 </resources>
